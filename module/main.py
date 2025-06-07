@@ -1,12 +1,12 @@
 import numpy as np
 # 加载GR4J其他参数
-other_para = np.loadtxt('/data/others.txt')
+other_para = np.loadtxt('../data/others.txt')
 area = other_para[0]  # 流域面积(km2)
 upperTankRatio = other_para[1]  # 产流水库初始填充率 S0/x1
 lowerTankRatio = other_para[2]  # 汇流水库初始填充率 R0/x3
 
 # 加载数据文件
-data = np.loadtxt('/data/inputData.txt')
+data = np.loadtxt('../data/inputData.txt')
 P = data[:, 0]  # 第二列: 日降雨量(mm)
 E = data[:, 1]  # 第三列: 蒸散发量(mm)
 Qobs = data[:, 2]*86.4/area  # 第四列: 流域出口观测流量(ML/day)
